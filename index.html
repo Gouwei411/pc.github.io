@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       body{
+            background: aqua;
+        }
+        #b{
+            width: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #c{
+            position: absolute;
+            left: 50%;
+            top: 65%;
+            transform: translate(-50%,-50%);
+        }
+        #bnt{
+            position: absolute;
+            left: 50%;
+            top: 80%;
+            transform: translate(-50%,-50%);
+            width: 160px;
+            height: 50px;
+            background: url(bom.png);
+            border: none;
+            color: aliceblue;
+            font-size: 21px;
+        }
+        #d{
+            position: relative;
+            top: 80px;
+            left: 90px;            
+        }
+        #f{
+            position: relative;
+            top: 300px;      
+            right: 160px;           
+        }
+        #g{
+            position: relative;
+            top: 100px;
+            left: 140px;            
+        }
+    
+    </style>
+</head>
+<body>
+    <a href=""><button id="bnt" disabled>进入(5)</button>  </a> 
+    <img id="b" src="school.png" >
+    <img id="c" src="ying.png" >
+    <img id="d" src="yun.png" >
+    <img id="f" src="yun.png" >
+    <img id="g"  src="yun.png" >
+    <script>
+        const bnt = document.getElementById("bnt")
+        i=5;
+        let times = setInterval(function(){
+            i--
+            bnt.innerHTML=`进入${i}`
+            if(i==0){
+                clearInterval(times)
+                bnt.disabled=false
+                bnt.innerHTML='进入'
+            }
+        },1000)
+    </script> 
+</body> 
+</html> 
